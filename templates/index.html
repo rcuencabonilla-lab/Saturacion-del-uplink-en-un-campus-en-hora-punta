@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Saturación del Uplink en Campus</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <h1>Análisis de Saturación del Uplink en un Campus Universitario</h1>
+    <p>Esta aplicación web muestra el cálculo del número máximo de usuarios simultáneos (Nmax) para diferentes perfiles de servicio y velocidades, basado en el modelo de capacidad uplink.</p>
+    
+    <h2>Tabla de Resultados</h2>
+    <div>{{ table|safe }}</div>
+    
+    <h2>Gráficas</h2>
+    <img src="{{ image }}" alt="Gráficas de Nmax">
+    
+    <h2>Recomendaciones</h2>
+    <p>En zonas de campus con alta concentración de usuarios durante cambios de clase, monitorear continuamente la carga uplink. Mantener la carga total por debajo del umbral de 0.7 para asegurar calidad de servicio. Para velocidades altas (50 km/h), limitar el número de usuarios con perfiles de 64 kb/s.</p>
+</body>
+</html>
